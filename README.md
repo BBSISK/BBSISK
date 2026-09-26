@@ -16,7 +16,7 @@
 flowchart LR
     A["💬 Prompt<br/>Claude Code / Antigravity<br/>in VS Code"] --> B["👀 Review &<br/>run tests locally"]
     B --> C["📤 git push<br/>to GitHub"]
-    C --> D["✅ GitHub Actions<br/>63 tests + MCP self-test<br/>on a clean Linux runner"]
+    C --> D["✅ GitHub Actions<br/>86 tests + MCP self-test<br/>on a clean Linux runner"]
     D -- pass --> E["🚀 Render<br/>auto-deploys<br/>Docker container"]
     D -- fail --> F["🛑 Deploy blocked<br/>live site untouched"]
     E --> G["🌐 Live in production"]
@@ -35,7 +35,7 @@ flowchart LR
 
 **[Wall Inspector](https://github.com/BBSISK/wall_inspector)**
 AI-assisted skills-assessment platform for civil engineering, heritage conservation and masonry students. Students identify defects in masonry photographs, classify severity and recommend conservation solutions, graded in real time against expert benchmarks.
-`Flask` `PostgreSQL` `Docker` `Terraform` `GitHub Actions` `Gemini vision` `MCP server` `COCO / YOLOv8 export`
+`Flask` `PostgreSQL` `Docker` `Terraform` `GitHub Actions` `Gemini vision` `Human-in-the-loop AI` `MCP server` `COCO / YOLOv8 export`
 
 **[In My Time](https://www.inmytime.app)**
 WhatsApp-based family-history service built on a privacy-first architecture: family stories are relayed without their content ever being stored. Client-side encryption, per-user access control, German localisation, automated API and browser test suites.
