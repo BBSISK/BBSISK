@@ -10,6 +10,27 @@
 
 ---
 
+### ⚙️ How I build: from prompt to production in minutes
+
+```mermaid
+flowchart LR
+    A["💬 Prompt<br/>Claude Code / Antigravity<br/>in VS Code"] --> B["👀 Review &<br/>run tests locally"]
+    B --> C["📤 git push<br/>to GitHub"]
+    C --> D["✅ GitHub Actions<br/>63 tests + MCP self-test<br/>on a clean Linux runner"]
+    D -- pass --> E["🚀 Render<br/>auto-deploys<br/>Docker container"]
+    D -- fail --> F["🛑 Deploy blocked<br/>live site untouched"]
+    E --> G["🌐 Live in production"]
+```
+
+1. **Describe the change** to an AI coding agent in VS Code. It writes the code and the tests alongside it.
+2. **Review it myself.** I read the diff and run the tests locally, because the agent drafts and I remain the engineer.
+3. **Push to GitHub.** A CI pipeline spins up a fresh machine and runs the full test suite.
+4. **Deploy only on green.** Render deploys automatically, but only after every check passes. A failing change never reaches users.
+
+**Result:** a reviewed, tested change goes from idea to live in about two minutes, with quality gates at every step. It is the same discipline I applied to production lines at Intel: inspect at every stage, and never ship a defect downstream.
+
+---
+
 ### 🛠️ Featured projects
 
 **[Wall Inspector](https://github.com/BBSISK/wall_inspector)**
@@ -44,4 +65,4 @@ A weekly journaling app: 30-word snapshots of your life, delivered by WhatsApp a
 ### 📫 Get in touch
 
 📧 barry.b.sisk@gmail.com
-🔗 LinkedIn:https://www.linkedin.com/in/barry-s-50135113/
+🔗 [LinkedIn](https://www.linkedin.com/in/barry-s-50135113/)
