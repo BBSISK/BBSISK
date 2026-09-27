@@ -4,8 +4,8 @@
 
 - 🎓 Completing a **Higher Diploma in Software Development** at Maynooth University (2027)
 - 🤖 I build with AI agents every day (Claude Code, Google Antigravity), and I build agents into my own apps
+- 🔎 **Ask me anything about my work:** [Ask Barry](https://ask-barry-7dkz.onrender.com) is my retrieval-augmented generation (RAG) assistant. It answers from my public docs and cites its sources
 - 🔒 I care about privacy by design, testing, and software that holds up in real use
-- 🔭 Currently exploring: RAG, multi-provider LLM orchestration and the Model Context Protocol
 - 💼 Open to part-time work during my studies and full-time roles from June 2027
 
 ---
@@ -33,6 +33,14 @@ flowchart LR
 
 ### 🛠️ Featured projects
 
+**[Ask Barry](https://ask-barry-7dkz.onrender.com)** · [code](https://github.com/BBSISK/ask-barry)
+A retrieval-augmented generation (RAG) assistant, live in production, that answers questions about my projects using only my public GitHub documentation. It cites the repo, file and section behind every answer, and says so when the docs don't support a claim.
+- **Measured, not assumed:** a golden test set with trap questions, section-level retrieval metrics, and an AI judge whose quoted evidence is checked in code. I also compared Azure OpenAI, Claude and Gemini on identical evidence.
+- **Runs itself:** a nightly GitHub Action re-indexes the docs and fails if retrieval accuracy drops. The Azure resources are managed in Terraform, and a model card documents its limits and an EU AI Act assessment.
+- **Usable by other AI assistants** as an MCP tool.
+
+`Azure AI Search` `Azure OpenAI` `RAG` `Embeddings` `LLM evaluation` `Terraform` `GitHub Actions` `MCP server`
+
 **[Wall Inspector](https://github.com/BBSISK/wall_inspector)**
 AI-assisted skills-assessment platform for civil engineering, heritage conservation and masonry students. Students identify defects in masonry photographs, classify severity and recommend conservation solutions, graded in real time against expert benchmarks.
 `Flask` `PostgreSQL` `Docker` `Terraform` `GitHub Actions` `Gemini vision` `Human-in-the-loop AI` `MCP server` `COCO / YOLOv8 export`
@@ -55,9 +63,9 @@ A weekly journaling app: 30-word snapshots of your life, delivered by WhatsApp a
 
 **Languages:** Python · Java · SQL · JavaScript · HTML/CSS
 **Frameworks:** Flask · Gunicorn · Spring Boot (learning)
-**Data:** PostgreSQL · SQLite · data modelling & migrations
-**Cloud & DevOps:** Docker · Terraform · GitHub Actions · Render · Cloudflare · Cloudinary
-**AI:** Claude Code · Gemini API · AI agents · MCP
+**Data:** PostgreSQL · SQLite · data modelling & migrations · vector & hybrid search
+**Cloud & DevOps:** Docker · Terraform · GitHub Actions · Render · Microsoft Azure · Cloudflare · Cloudinary
+**AI:** RAG · Azure OpenAI · Azure AI Search · LLM evaluation · Claude Code · Claude API · Gemini API · AI agents · MCP
 **Integrations:** REST APIs · webhooks · Twilio / WhatsApp · OAuth (Google, Microsoft/Azure)
 
 ---
