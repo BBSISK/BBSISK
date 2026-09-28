@@ -1,10 +1,11 @@
 ### Hi, I'm Barry 👋
 
-**Engineer turned software developer.** I spent 30 years at Intel Ireland leading engineering teams in high-volume, tightly controlled manufacturing. Now I build AI-enabled applications and ship them to production.
+**Engineer turned software developer.** I spent 30 years at Intel Ireland leading engineering teams in high-volume, tightly controlled manufacturing ([career history](career.md)). Now I build AI-enabled applications and ship them to production.
 
 - 🎓 Completing a **Higher Diploma in Software Development** at Maynooth University (2027)
 - 🤖 I build with AI agents every day (Claude Code, Google Antigravity), and I build agents into my own apps
 - 🔎 **Ask me anything about my work:** [Ask Barry](https://ask-barry-7dkz.onrender.com) is my retrieval-augmented generation (RAG) assistant. It answers from my public docs and cites its sources
+- 🧭 **Hiring?** [Paste your job ad](https://ask-barry-7dkz.onrender.com/evidence): an AI agent I built maps each requirement to evidence in my project docs, with links
 - 🔒 I care about privacy by design, testing, and software that holds up in real use
 - 💼 Open to part-time work during my studies and full-time roles from June 2027
 
@@ -38,8 +39,9 @@ A retrieval-augmented generation (RAG) assistant, live in production, that answe
 - **Measured, not assumed:** a golden test set with trap questions, section-level retrieval metrics, and an AI judge whose quoted evidence is checked in code. I also compared Azure OpenAI, Claude and Gemini on identical evidence.
 - **Runs itself:** a nightly GitHub Action re-indexes the docs and fails if retrieval accuracy drops. The Azure resources are managed in Terraform, and a model card documents its limits and an EU AI Act assessment.
 - **Usable by other AI assistants** as an MCP tool.
+- **An AI agent on top:** built with Microsoft Agent Framework, it reads a [job ad](https://ask-barry-7dkz.onrender.com/evidence), calls Ask Barry over MCP once per requirement and returns an evidence map with links. Its guardrails are enforced in code: every "evidenced" row must cite a link the tool actually returned, only the one tool is allowed, runs have a budget, and it never scores or ranks a candidate. Evaluated against a no-agent baseline: no false evidence in either, and 100% vs 92% status accuracy.
 
-`Azure AI Search` `Azure OpenAI` `RAG` `Embeddings` `LLM evaluation` `Terraform` `GitHub Actions` `MCP server`
+`Azure AI Search` `Azure OpenAI` `RAG` `Embeddings` `LLM evaluation` `Terraform` `GitHub Actions` `MCP server` `Microsoft Agent Framework` `AI agents`
 
 **[Wall Inspector](https://github.com/BBSISK/wall_inspector)**
 AI-assisted skills-assessment platform for civil engineering, heritage conservation and masonry students. Students identify defects in masonry photographs, classify severity and recommend conservation solutions, graded in real time against expert benchmarks.
@@ -65,7 +67,7 @@ A weekly journaling app: 30-word snapshots of your life, delivered by WhatsApp a
 **Frameworks:** Flask · Gunicorn · Spring Boot (learning)
 **Data:** PostgreSQL · SQLite · data modelling & migrations · vector & hybrid search
 **Cloud & DevOps:** Docker · Terraform · GitHub Actions · Render · Microsoft Azure · Cloudflare · Cloudinary
-**AI:** RAG · Azure OpenAI · Azure AI Search · LLM evaluation · Claude Code · Claude API · Gemini API · AI agents · MCP
+**AI:** RAG · Azure OpenAI · Azure AI Search · LLM evaluation · AI agents (Microsoft Agent Framework, tool calling, guardrails, agent evaluation) · MCP · Claude Code · Claude API · Gemini API
 **Integrations:** REST APIs · webhooks · Twilio / WhatsApp · OAuth (Google, Microsoft/Azure)
 
 ---
