@@ -5,7 +5,8 @@
 - 🎓 Completing a **Higher Diploma in Software Development** at Maynooth University (2027)
 - 🤖 I build with AI agents every day (Claude Code, Google Antigravity), and I build agents into my own apps
 - 🔎 **Ask me anything about my work:** [Ask Barry](https://ask-barry-7dkz.onrender.com) is my retrieval-augmented generation (RAG) assistant. It answers from my public docs and cites its sources
-- 🧭 **Hiring?** [Paste your job ad](https://ask-barry-7dkz.onrender.com/evidence): an AI agent I built maps each requirement to evidence in my project docs, with links
+- 🧭 **Hiring?** [Paste your job ad](https://ask-barry-7dkz.onrender.com/evidence), or photograph it on your phone: an AI agent I built maps each requirement to evidence in my project docs, with links, and you can share the result by QR code, WhatsApp or email
+- 📇 **Everything in one place:** [my links page](https://ask-barry-7dkz.onrender.com/connect) (projects, live sites, LinkedIn, GitHub and career history)
 - 🔒 I care about privacy by design, testing, and software that holds up in real use
 - 💼 Open to part-time work during my studies and full-time roles from June 2027
 
@@ -37,11 +38,13 @@ flowchart LR
 **[Ask Barry](https://ask-barry-7dkz.onrender.com)** · [code](https://github.com/BBSISK/ask-barry)
 A retrieval-augmented generation (RAG) assistant, live in production, that answers questions about my projects using only my public GitHub documentation. It cites the repo, file and section behind every answer, and says so when the docs don't support a claim.
 - **Measured, not assumed:** a golden test set with trap questions, section-level retrieval metrics, and an AI judge whose quoted evidence is checked in code. I also compared Azure OpenAI, Claude and Gemini on identical evidence.
+- **I tested the judge too:** I hand-labelled 55 claims, including planted near-misses with one detail changed, and measured my GPT-4.1-mini judge against a second judge of a different kind, TypeSafe's Jev decision model. They agreed on 54 of 55; Jev cost about a seventh as much and its confidence score flags the few uncertain claims for a person. The labelling also showed that I miss single changed details more often than either judge, which is the reason automated checks exist.
 - **Runs itself:** a nightly GitHub Action re-indexes the docs and fails if retrieval accuracy drops. The Azure resources are managed in Terraform, and a model card documents its limits and an EU AI Act assessment.
 - **Usable by other AI assistants** as an MCP tool.
-- **An AI agent on top:** built with Microsoft Agent Framework, it reads a [job ad](https://ask-barry-7dkz.onrender.com/evidence), calls Ask Barry over MCP once per requirement and returns an evidence map with links. Its guardrails are enforced in code: every "evidenced" row must cite a link the tool actually returned, only the one tool is allowed, runs have a budget, and it never scores or ranks a candidate. Evaluated against a no-agent baseline: no false evidence in either, and 100% vs 92% status accuracy.
+- **An AI agent on top:** built with Microsoft Agent Framework, it reads a [job ad](https://ask-barry-7dkz.onrender.com/evidence), calls Ask Barry over MCP once per requirement and returns an evidence map with links. Its guardrails are enforced in code: every "evidenced" row must cite a link the tool actually returned, only the one tool is allowed, runs have a budget, and it never scores or ranks a candidate. Evaluated against a no-agent baseline: no false evidence in either, and 100% vs 92% status accuracy. A skill listed only on this profile is labelled "Listed on profile", not evidenced, because a self-description isn't proof of work.
+- **Built for use on the spot:** the evidence page runs the agent as a background job and shows each question it asks; a phone camera can scan a printed job ad (the text is shown for checking before anything runs); results can be shared by QR code, WhatsApp or email through a signed link, with no database.
 
-`Azure AI Search` `Azure OpenAI` `RAG` `Embeddings` `LLM evaluation` `Terraform` `GitHub Actions` `MCP server` `Microsoft Agent Framework` `AI agents`
+`Azure AI Search` `Azure OpenAI` `RAG` `Embeddings` `LLM evaluation` `Terraform` `GitHub Actions` `MCP server` `Microsoft Agent Framework` `AI agents` `LLM-as-judge` `TypeSafe Jev` `Vision (text from photos)`
 
 **[Wall Inspector](https://github.com/BBSISK/wall_inspector)**
 AI-assisted skills-assessment platform for civil engineering, heritage conservation and masonry students. Students identify defects in masonry photographs, classify severity and recommend conservation solutions, graded in real time against expert benchmarks.
@@ -67,7 +70,7 @@ A weekly journaling app: 30-word snapshots of your life, delivered by WhatsApp a
 **Frameworks:** Flask · Gunicorn · Spring Boot (learning)
 **Data:** PostgreSQL · SQLite · data modelling & migrations · vector & hybrid search
 **Cloud & DevOps:** Docker · Terraform · GitHub Actions · Render · Microsoft Azure · Cloudflare · Cloudinary
-**AI:** RAG · Azure OpenAI · Azure AI Search · LLM evaluation · AI agents (Microsoft Agent Framework, tool calling, guardrails, agent evaluation) · MCP · Claude Code · Claude API · Gemini API
+**AI:** RAG · Azure OpenAI · Azure AI Search · LLM evaluation (LLM-as-judge, hand-labelled agreement testing) · AI agents (Microsoft Agent Framework, tool calling, guardrails, agent evaluation) · MCP · TypeSafe Jev (Cloudflare Workers AI) · Claude Code · Claude API · Gemini API
 **Integrations:** REST APIs · webhooks · Twilio / WhatsApp · OAuth (Google, Microsoft/Azure)
 
 ---
@@ -76,3 +79,4 @@ A weekly journaling app: 30-word snapshots of your life, delivered by WhatsApp a
 
 📧 barry.b.sisk@gmail.com
 🔗 [LinkedIn](https://www.linkedin.com/in/barry-s-50135113/)
+
