@@ -64,6 +64,21 @@ A weekly journaling app: 30-word snapshots of your life, delivered by WhatsApp a
 
 ---
 
+### 🎓 Studying now: H.Dip. in Software Development, Maynooth University (2026–27)
+
+| Semester 1 (Sept–Dec 2026) | Semester 2 (Jan–May 2027) |
+|---|---|
+| Structured Programming (Java) | Algorithms & Data Structures 2 |
+| Algorithms & Data Structures 1 | Web Information Processing (REST, full stack) |
+| Software Testing (JUnit) | Software Project (Scrum team, DevOps) |
+| Databases | Work Placement Preparation |
+| Mobile Application Development (React) | |
+| Computer Systems | |
+
+Year-long: Object-Oriented Programming across multiple languages. I publish coursework code here once each module has been assessed.
+
+---
+
 ### 🧰 Toolbox
 
 **Languages:** Python · Java · SQL · JavaScript · HTML/CSS
