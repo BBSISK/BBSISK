@@ -1,6 +1,6 @@
 ### Hi, I'm Barry 👋
 
-**Engineer turned software developer.** I spent 30 years at Intel Ireland leading engineering teams in high-volume, tightly controlled manufacturing ([career history](career.md)). Now I build AI-enabled applications and ship them to production.
+**Engineer turned software developer.** I spent 30 years at Intel Ireland leading engineering teams in high-volume, tightly controlled manufacturing ([career history](career.md)). See [how those manufacturing disciplines map onto software delivery](manufacturing-to-software.md). Now I build AI-enabled applications and ship them to production.
 
 - 🎓 Completing a **Higher Diploma in Software Development** at Maynooth University (2027)
 - 🤖 I build with AI agents every day (Claude Code, Google Antigravity), and I build agents into my own apps
@@ -81,7 +81,7 @@ Year-long: Object-Oriented Programming across multiple languages. I publish cour
 
 ### 🧰 Toolbox
 
-**Languages:** Python · Java · SQL · JavaScript · HTML/CSS
+**Languages:** Java (I write it; HDip coursework) · Python · SQL · JavaScript · HTML/CSS (built with Claude Code: I specify, review, test and deploy every change)
 **Frameworks:** Flask · Gunicorn · Spring Boot (learning)
 **Data:** PostgreSQL · SQLite · data modelling & migrations · vector & hybrid search
 **Cloud & DevOps:** Docker · Terraform · GitHub Actions · Render · Microsoft Azure · Cloudflare · Cloudinary
@@ -94,4 +94,5 @@ Year-long: Object-Oriented Programming across multiple languages. I publish cour
 
 📧 barry.b.sisk@gmail.com
 🔗 [LinkedIn](https://www.linkedin.com/in/barry-s-50135113/)
+
 
