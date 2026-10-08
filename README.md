@@ -1,12 +1,13 @@
 ### Hi, I'm Barry 👋
 
-**Engineer turned software developer.** I spent 30 years at Intel Ireland leading engineering teams in high-volume, tightly controlled manufacturing ([career history](career.md)). See [how those manufacturing disciplines map onto software delivery](manufacturing-to-software.md). Now I build AI-enabled applications and ship them to production.
+**Engineer turned software developer.** I spent 30 years at Intel Ireland leading engineering teams in high-volume, tightly controlled manufacturing ([career history](career.md)). Now I build AI-enabled applications and ship them to production.
 
 - 🎓 Completing a **Higher Diploma in Software Development** at Maynooth University (2027)
 - 🤖 I build with AI agents every day (Claude Code, Google Antigravity), and I build agents into my own apps
 - 🔎 **Ask me anything about my work:** [Ask Barry](https://ask-barry.onrender.com) is my retrieval-augmented generation (RAG) assistant. It answers from my public docs and cites its sources
 - 🧭 **Hiring?** [Paste your job ad](https://ask-barry.onrender.com/evidence), or photograph it on your phone: an AI agent I built maps each requirement to evidence in my project docs, with links, and you can share the result by QR code, WhatsApp or email
 - 📇 **Everything in one place:** [my links page](https://ask-barry.onrender.com/connect) (projects, live sites, LinkedIn, GitHub and career history)
+- 🏭 **From fab to pipeline:** [how my manufacturing disciplines map onto software delivery](manufacturing-to-software.md), from SPC and change control to CI quality gates and real-time fault detection
 - 🔒 I care about privacy by design, testing, and software that holds up in real use
 - 💼 Open to part-time work during my studies and full-time roles from June 2027
 
