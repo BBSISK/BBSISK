@@ -65,16 +65,37 @@ An AI game-master agent written in Java on Amazon Bedrock with no agent framewor
 AI-assisted skills-assessment platform for civil engineering, heritage conservation and masonry students. Students identify defects in masonry photographs, classify severity and recommend conservation solutions, graded in real time against expert benchmarks. Every AI proposal is tracked as auto-suggested, assessor-accepted or human-graded.
 `Flask` `PostgreSQL` `Docker` `Terraform` `GitHub Actions` `Gemini vision` `Human-in-the-loop AI` `MCP server` `COCO / YOLOv8 export`
 
+**[Degree Drift](https://degree-drift.onrender.com/)** · [code](https://github.com/BBSISK/degree-drift)
+An interactive data-journalism dashboard that follows Irish university graduates into the sectors of the economy where they work, 1 to 10 years after graduation. It is built on Central Statistics Office (CSO) data linked to Revenue tax records, by field of study and institution. It shows, for example, that at Year 5 more Business (26.9%) and Arts & Humanities (22.6%) graduates work in Irish tech than ICT graduates (24.4%).
+- **Honest with small numbers:** the CSO suppresses small cells to protect privacy, and I leave those out rather than estimate them, so a missing flow means the figure was not published.
+- **Built to be fast and checked:** a Python standard-library pipeline reads three CSO tables (HEO08, HEO12, HEO16) once and writes one compact file, so the site never calls the CSO API. A custom D3 Sankey diagram shows the flows, TypeScript runs in strict mode, and GitHub Actions builds and deploys every push.
+`React` `TypeScript` `Vite` `D3 (Sankey)` `Tailwind CSS` `Python` `CSO open data` `GitHub Actions`
+
+**[The 7pm "Stove Inversion"](https://stove-inversion.onrender.com/)** · [code](https://github.com/BBSISK/stove-inversion)
+An interactive dashboard of live air-quality readings from all 113 EPA Ireland monitoring stations, asking why quiet regional towns such as Ennis, Tralee and Longford see winter fine-particle (PM2.5) spikes far above Dublin's. On the 2 November peak it found Ennis at 198.1 µg/m³ against 9.1 µg/m³ at Phoenix Park in the same hour, about 22 times higher and 13 times the WHO 24-hour guideline. In the data the peaks fall in the evening window of 19:00 to 21:00 UTC, not at commuter rush hours, which points to home heating (turf, briquettes, wood) trapped by cold, still nights, set against Dublin's long-standing smoky-coal ban and gas network. It is a public-health story told with public data.
+- **Built to be read:** a custom SVG map of Ireland with all 113 stations, time-series charts against the WHO threshold, and 24-hour averages. A Python scraper pulls the readings from the EPA's public air-quality service, and GitHub Actions deploys the site.
+`React` `TypeScript` `Tailwind CSS` `Python` `SVG data visualisation` `EPA open data` `GitHub Actions`
+
+**[Housing Pipeline Ireland](https://github.com/BBSISK/housing-pipeline-ireland)** · in progress
+A data pipeline that joins three public Irish sources never designed to fit together: the Property Price Register (810,390 sales), South Dublin planning applications (33,304) and Oireachtas parliamentary questions (5,420, of which 349 went to Housing). Sprint 1 is done: every raw file is landed unchanged with a SHA-256 hash and row count, and a [data profile](https://github.com/BBSISK/housing-pipeline-ireland/blob/main/docs/data-profile.md) documents 15 quality issues, with a dashboard of the findings. Along the way I caught my own flawed metric (a "contains a figure" check that read 349 of 349 and fell to 119 of 349 once boilerplate was stripped). Azure storage is built in Terraform with keyless upload. Next: geocoding, matching permissions to later sales, an MCP server and an evaluated Q&A agent.
+`Python` `Azure Blob Storage` `Terraform` `GitHub Actions` `Data quality` `Open data` `Data visualisation`
+
 **[SECOM Semiconductor Pipeline](https://github.com/BBSISK/SECOM_Pipeline)** · in progress
 A streaming replay of the public SECOM fab dataset (1,567 runs, 590 sensors) aimed at statistical process control monitoring, on AWS. Sprint 1 is done: the data is profiled, there is a record contract with ten reject reasons, a replay producer with fault injection, and a container shipped to ECR by GitHub OIDC (no stored keys) and blocked on critical vulnerabilities. Next: Kinesis, Lambda and SPC monitoring.
 `AWS` `Terraform` `GitHub OIDC` `Docker` `Python` `SPC`
 
 **[In My Time](https://www.inmytime.app)**
-WhatsApp-based family-history service built on a privacy-first architecture: family stories are relayed without their content ever being stored. Client-side encryption, per-user access control, German localisation, automated API and browser test suites.
+WhatsApp-based family-history service built on a privacy-first architecture: a grandparent answers one weekly question at a time and the answers pass to a family member, without the content ever being stored. The older person gives her own consent, the questions never assume a conventional life, and the system never assumes someone has died. The StoryCatcher feature lets relatives record interviews together, with per-interviewee access control, client-side encryption and families keeping recordings in their own Google Drive. German localisation, automated API and browser test suites.
 `Flask` `WhatsApp Business API` `Cloudflare R2` `Playwright` `Flask-Babel`
 
+**[Taxi of Mum & Dad](https://taxi-mum-dad-eu.onrender.com)** · [code](https://github.com/BBSISK/taxi-mum-dad)
+A family web app that turns the lift into a game: a parent starts a meter, the app times and measures the trip, and the kids' tab grows with cheeky surcharges ("Backseat driver +3"). Kids pay it off with jobs: a tidy room, a visit to Granny, an outdoor afternoon instead of games. It is designed around real family life: kids have no login (their secret receipt link is their only way in), receipts go by WhatsApp or QR code, credits come off only when a parent confirms, and the data is EU-hosted and minimal. Now in early testing with families.
+- **In-car games for the whole family:** Car Bingo (I-spy from an Irish car window, memorise then hide) and County Collector (spot number plates and fill a passport of the 26 Republic counties). They are hands-free by voice, with tap buttons as a fallback, and no audio or transcripts reach the server. Getting voice to work alongside a car radio is still being tested on real drives.
+- **Built to be trusted:** installable PWA, GDPR export and delete for a child or a family, 36 pytest tests plus Playwright browser tests with simulated speech.
+`Flask` `PostgreSQL` `PWA` `Web Speech API` `Playwright` `GDPR`
+
 **[AgentMath](https://www.agentmath.app)**
-Adaptive maths learning platform for Irish Junior Cycle students, with 3,000+ assessment items, teacher dashboards and personalised assignments.
+Adaptive maths learning platform for Irish Junior Cycle students (aged 12 to 16), with 3,000+ assessment items, classroom games, teacher dashboards that show where students are stuck, and personalised assignments.
 `Flask` `SQLite` `JavaScript`
 
 **[Brief](https://www.my30words.com)**
@@ -100,9 +121,9 @@ Year-long: Object-Oriented Programming across multiple languages. I publish cour
 
 ### 🧰 Toolbox
 
-**Languages:** Java (I write it by hand; HDip coursework and Agent Quest) · SQL · Python · JavaScript · HTML/CSS (Python and web code built with Claude Code: I specify, review, test and deploy every change) · TypeScript and React (practice and course work)
+**Languages:** Java (I write it by hand; HDip coursework and Agent Quest) · SQL · Python · JavaScript · HTML/CSS (Python and web code built with Claude Code: I specify, review, test and deploy every change) · TypeScript and React (Degree Drift dashboard, practice and course work) · D3
 **Frameworks:** Flask · Gunicorn · Spring Boot (learning)
-**Data:** PostgreSQL · SQLite · data modelling & migrations · vector & hybrid search
+**Data:** PostgreSQL · SQLite · data modelling & migrations · vector & hybrid search · open-data pipelines (CSO, Property Price Register, planning data) · data profiling and quality · data visualisation (D3)
 **Cloud & DevOps:** Docker · Terraform · GitHub Actions (CI/CD, GitHub OIDC) · Render · Microsoft Azure (Entra ID) · AWS (Bedrock, ECR, IAM) · Cloudflare · Cloudinary
 **AI:** RAG · Azure OpenAI · Azure AI Search · Amazon Bedrock · LLM evaluation (LLM-as-judge, hand-labelled agreement testing) · AI agents (Microsoft Agent Framework, LangGraph, a hand-written Java agent loop, tool calling, guardrails, agent evaluation) · MCP · TypeSafe Jev (Cloudflare Workers AI) · Claude Code · Claude API · Gemini API
 **Integrations:** REST APIs · webhooks · Twilio / WhatsApp · OAuth (Google, Microsoft/Azure)
