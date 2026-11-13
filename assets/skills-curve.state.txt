@@ -1,0 +1,50 @@
+Evaluated, not vibes
+AI tools without evals
+Engineering foundations
+My Higher Diploma, plus my own projects.
+AI engineering
+Built, live and evaluated at the same time.
+4
+Python & Flask
+Ask Barry
+3
+Databases & SQL
+In My Time
+2
+Java
+CS627 Java labs, LeetCode in Java
+3
+Front-end frameworks
+Degree Drift
+4
+Cloud (Azure & AWS)
+Ask Barry
+4
+CI/CD & DevOps
+Ask Barry, SECOM Pipeline
+4
+Containers (Docker)
+SECOM Pipeline
+4
+Infrastructure as code
+Ask Barry
+3
+Data streaming
+SECOM Pipeline
+Kubernetes
+Not evidenced yet
+4
+RAG & LLM apps
+Ask Barry
+4
+Agents & MCP
+Ask Barry, Wall Inspector
+4
+Testing & evaluation
+Ask Barry, Housing Pipeline Ireland
+4
+Security & identity
+Ask Barry, Housing Pipeline Ireland
+4
+Change control
+Ask Barry, SECOM Pipeline
