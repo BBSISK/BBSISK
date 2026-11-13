@@ -1,0 +1,44 @@
+name: Refresh skills curve
+
+on:
+  schedule:
+    - cron: '30 5 * * *'   # daily 05:30 UTC: set this to AFTER Ask Barry's nightly re-index finishes
+  workflow_dispatch: {}     # lets you run it by hand from the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-skills-curve
+  cancel-in-progress: false
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Playwright
+        run: |
+          npm install --no-save playwright@1.49.1
+          npx playwright install --with-deps chromium
+
+      - name: Snapshot the live curve
+        run: node scripts/snapshot_curve.mjs
+
+      - name: Commit if changed
+        run: |
+          if [ -n "$(git status --porcelain assets/)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/skills-curve.png assets/skills-curve.state.txt
+            git commit -m "Refresh skills curve from Ask Barry"
+            git push
+          else
+            echo "No change to commit."
+          fi
