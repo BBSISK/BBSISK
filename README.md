@@ -58,8 +58,10 @@ A retrieval-augmented generation (RAG) assistant, live in production, that answe
 `Azure AI Search` `Azure OpenAI` `RAG` `Embeddings` `LLM evaluation` `Terraform` `GitHub Actions` `MCP server` `Microsoft Agent Framework` `LangGraph` `AI agents` `LLM-as-judge` `TypeSafe Jev` `Amazon Bedrock`
 
 **[Agent Quest](https://github.com/BBSISK/agent-quest-java)**
-An AI game-master agent written in Java on Amazon Bedrock with no agent framework: a hand-written agentic loop on the Converse API with four tools, tested with 24 JUnit tests against a scripted fake model. I benchmarked two models on the same scripted game, judged from the tool log: Claude Haiku 4.5 recorded 9 of 9 required state changes and Amazon Nova 2 Lite recorded 0 of 9, even with an explicit prompt rule. Choosing the model mattered more than the prompt. A Spring Boot and React web version is in progress.
-`Java` `AWS SDK for Java v2` `Amazon Bedrock` `JUnit` `GitHub Actions`
+An AI game-master agent written in Java on Amazon Bedrock with no agent framework: a hand-written agentic loop on the Converse API with four tools, tested with 24 JUnit tests against a scripted fake model. I benchmarked two models on the same scripted game, judged from the tool log: Claude Haiku 4.5 recorded 9 of 9 required state changes and Amazon Nova 2 Lite recorded 0 of 9, even with an explicit prompt rule. Choosing the model mattered more than the prompt.
+- **Now with a memory in the cloud:** a Spring Boot REST API saves every game to MySQL on **Amazon RDS**. Five tables with foreign keys and CHECK constraints (the database itself refuses negative gold), parameterised SQL through JdbcTemplate, and each turn saved in one transaction with its tool calls. Proved live with a restart test: the server was stopped and started, and the game came back from RDS with its gold and its story. 44 tests run on every push against an in-memory database, with no AWS needed. A React front end is next.
+
+`Java` `AWS SDK for Java v2` `Amazon Bedrock` `Spring Boot` `REST API` `Amazon RDS` `MySQL` `JDBC` `JUnit` `GitHub Actions`
 
 **[Wall Inspector](https://github.com/BBSISK/wall_inspector)**
 AI-assisted skills-assessment platform for civil engineering, heritage conservation and masonry students. Students identify defects in masonry photographs, classify severity and recommend conservation solutions, graded in real time against expert benchmarks. Every AI proposal is tracked as auto-suggested, assessor-accepted or human-graded.
@@ -121,10 +123,10 @@ Year-long: Object-Oriented Programming across multiple languages. I publish cour
 
 ### 🧰 Toolbox
 
-**Languages:** Java (I write it by hand; HDip coursework and Agent Quest) · SQL · Python · JavaScript · HTML/CSS (Python and web code built with Claude Code: I specify, review, test and deploy every change) · TypeScript and React (Degree Drift dashboard, practice and course work) · D3
-**Frameworks:** Flask · Gunicorn · Spring Boot (learning)
-**Data:** PostgreSQL · SQLite · data modelling & migrations · vector & hybrid search · open-data pipelines (CSO, Property Price Register, planning data) · data profiling and quality · data visualisation (D3)
-**Cloud & DevOps:** Docker · Terraform · GitHub Actions (CI/CD, GitHub OIDC) · Render · Microsoft Azure (Entra ID) · AWS (Bedrock, ECR, IAM) · Cloudflare · Cloudinary
+**Languages:** Java (I write it by hand: HDip coursework, and Agent Quest's agent loop and tools) · SQL · Python · JavaScript · HTML/CSS (Python and web code built with Claude Code: I specify, review, test and deploy every change) · TypeScript and React (Degree Drift dashboard, practice and course work) · D3
+**Frameworks:** Flask · Gunicorn · Spring Boot (REST API, JdbcTemplate; learning)
+**Data:** PostgreSQL · MySQL (Amazon RDS) · SQLite · data modelling & migrations · vector & hybrid search · open-data pipelines (CSO, Property Price Register, planning data) · data profiling and quality · data visualisation (D3)
+**Cloud & DevOps:** Docker · Terraform · GitHub Actions (CI/CD, GitHub OIDC) · Render · Microsoft Azure (Entra ID) · AWS (Bedrock, RDS, ECR, IAM) · Cloudflare · Cloudinary
 **AI:** RAG · Azure OpenAI · Azure AI Search · Amazon Bedrock · LLM evaluation (LLM-as-judge, hand-labelled agreement testing) · AI agents (Microsoft Agent Framework, LangGraph, a hand-written Java agent loop, tool calling, guardrails, agent evaluation) · MCP · TypeSafe Jev (Cloudflare Workers AI) · Claude Code · Claude API · Gemini API
 **Integrations:** REST APIs · webhooks · Twilio / WhatsApp · OAuth (Google, Microsoft/Azure)
 
