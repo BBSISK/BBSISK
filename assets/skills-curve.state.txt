@@ -9,13 +9,13 @@ Python & Flask
 Ask Barry
 3
 Databases & SQL
-In My Time
+In My Time, Wall Inspector
 2
 Java
 CS627 Java labs, LeetCode in Java
-3
+2
 Front-end frameworks
-Degree Drift
+React challenges
 4
 Cloud (Azure & AWS)
 Ask Barry, SECOM Pipeline
