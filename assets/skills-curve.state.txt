@@ -9,7 +9,7 @@ Python & Flask
 Ask Barry
 3
 Databases & SQL
-In My Time, Wall Inspector
+In My Time
 2
 Java
 CS627 Java labs, LeetCode in Java
