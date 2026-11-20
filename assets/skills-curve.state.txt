@@ -18,7 +18,7 @@ Front-end frameworks
 React challenges
 4
 Cloud (Azure & AWS)
-Ask Barry, SECOM Pipeline
+Ask Barry
 4
 CI/CD & DevOps
 Ask Barry, SECOM Pipeline
